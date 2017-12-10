@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Parisienne', cursive;
 }
 
 .App-logo {
@@ -8,21 +9,61 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+   background-color: #F0AD4E;
+   color: #7F0A10;
+   height: 180px;
+   padding: 20px;
+   min-width: 300px;
+}
+
+.App-header h1 {
+  white-space: nowrap;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3em;
 }
 
 .App-intro {
-  font-size: large;
+  font-size: medium;
+  font-family: 'Open Sans', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+ /* Override bootstrap */
+.App-intro .btn-toolbar {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 20px;
+  display: inline-block;
+  min-width: 300px;
+}
+
+.button-toolbar-label {
+  display: inline;
+}
+
+.btn-toolbar button.btn {
+  float: none;
+  border-radius: 30px;
+}
+
+.App .btn-default {
+  border-radius: 30px;
+  background-color: #FFF;
+  border-color: #7F0A10;
+  color: #000;
+}
+
+.App .btn-primary {
+  border-radius: 30px;
+  background-color: #7F0A10;
+  border-color: #7F0A10;
+  color: #FFF;
+}
+
+.generate-button {
+  margin: 20px;
+}
+
+.generate-button button {
+  font-size: medium;
 }
