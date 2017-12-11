@@ -1,0 +1,16 @@
+/* Override bootstrap */
+.ParagraphSelect .btn-toolbar {
+ font-family: 'Open Sans', sans-serif;
+ margin-top: 20px;
+ display: inline-block;
+ min-width: 300px;
+}
+
+.ParagraphSelect__label {
+ display: inline;
+}
+
+.ParagraphSelect button.btn {
+ float: none;
+ border-radius: 30px;
+}

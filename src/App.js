@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
-import { Button, ButtonToolbar } from 'react-bootstrap';
-import logo from './logo.svg';
-import leaf from './fall_leaves.png'
 import './App.css';
+import ParagraphSelect from './ParagraphSelect';
+import GenerateButton from './GenerateButton';
+import Header from './Header';
+import LoremIpsum from './LoremIpsum';
 
 class App extends Component {
+  state = {
+    paragraphCount: null,
+    ipsumParagraphs: 0,
+  }
+
+  onParagraphSelect = (number) => {
+    this.setState({ paragraphCount: number });
+  }
+
+  onGenerate = (event) => {
+    event.preventDefault();
+    this.setState({ ipsumParagraphs: this.state.paragraphCount });
+  }
+
   render() {
+    console.log('state: ', this.state);
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={leaf} height={100} width={100} className="App-logo" alt="logo" />
-          <h1 className="App-title">Pumpkin Ipsum</h1>
-        </header>
-        <p className="App-intro">
-          <ButtonToolbar>
-            <span className='button-toolbar-label'>Paragraphs: </span>
-            {[1,2,3,4].map(number => (
-              <Button bsStyle="default" bsSize="small">{number}</Button>
-            ))}
-          </ButtonToolbar>
-          <div className='generate-button'>
-            <Button bsStyle="primary" bsSize="small">
-              Generate
-            </Button>
-          </div>
-        </p>
+        <Header />
+        <div className="App-intro">
+          <ParagraphSelect
+            paragraphCount={this.state.paragraphCount}
+            onButtonClick={this.onParagraphSelect}
+          />
+          <GenerateButton onClick={this.onGenerate} />
+          <LoremIpsum paragraphs={this.state.ipsumParagraphs}/>
+        </div>
       </div>
     );
   }

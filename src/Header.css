@@ -1,0 +1,20 @@
+.Header__image {
+  height: 100;
+  width: 100;
+}
+
+.Header {
+  background-color: #F0AD4E;
+  color: #7F0A10;
+  height: 200px;
+  padding: 20px;
+  min-width: 300px;
+}
+
+.Header h1 {
+  white-space: nowrap;
+}
+
+.Header__title {
+  font-size: 3em;
+}

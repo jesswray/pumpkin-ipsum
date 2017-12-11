@@ -3,49 +3,12 @@
   font-family: 'Parisienne', cursive;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-   background-color: #F0AD4E;
-   color: #7F0A10;
-   height: 180px;
-   padding: 20px;
-   min-width: 300px;
-}
-
-.App-header h1 {
-  white-space: nowrap;
-}
-
-.App-title {
-  font-size: 3em;
-}
-
 .App-intro {
   font-size: medium;
   font-family: 'Open Sans', sans-serif;
 }
 
- /* Override bootstrap */
-.App-intro .btn-toolbar {
-  font-family: 'Open Sans', sans-serif;
-  margin-top: 20px;
-  display: inline-block;
-  min-width: 300px;
-}
-
-.button-toolbar-label {
-  display: inline;
-}
-
-.btn-toolbar button.btn {
-  float: none;
-  border-radius: 30px;
-}
-
+/* Bootstrap Overrides */
 .App .btn-default {
   border-radius: 30px;
   background-color: #FFF;
@@ -60,10 +23,9 @@
   color: #FFF;
 }
 
-.generate-button {
-  margin: 20px;
+.App .btn-primary:focus {
+  outline: none;
 }
-
-.generate-button button {
-  font-size: medium;
+.App .btn-primary:active {
+  outline: none;
 }
