@@ -9,7 +9,7 @@ const LoremIpsum = ({ paragraphs }) => (
         className='LoremIpsum__paragraph'
         key={i}
       >
-        {loremIpsumParagraph(100)}
+        {loremIpsumParagraph(75)}
       </p>
     ))}
   </div>
