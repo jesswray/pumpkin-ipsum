@@ -1,5 +1,4 @@
 import React from 'react';
-import dictionary from './ipsum';
 import loremIpsumParagraph from './ipsum_script';
 import './LoremIpsum.css';
 

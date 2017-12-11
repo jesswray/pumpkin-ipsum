@@ -87,7 +87,7 @@ function loremIpsumParagraph(numWords){
 	while(words > 0){
 		if(words > 10){
 			var w = Math.floor(Math.random() * 8) + 2;
-			acc += loremIpsumSentence2(w);
+			acc += loremIpsumSentence(w);
 			words = words - w;
 		} else {
 			acc += loremIpsumSentence2(words);
