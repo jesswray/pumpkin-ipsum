@@ -4,11 +4,12 @@ import ParagraphSelect from './ParagraphSelect';
 import GenerateButton from './GenerateButton';
 import Header from './Header';
 import LoremIpsum from './LoremIpsum';
+import loremIpsumParagraph from './ipsum_script';
 
 class App extends Component {
   state = {
     paragraphCount: null,
-    ipsumParagraphs: 0,
+    ipsumParagraphs: [],
   }
 
   onParagraphSelect = (number) => {
@@ -16,12 +17,14 @@ class App extends Component {
   }
 
   onGenerate = (event) => {
-    event.preventDefault();
-    this.setState({ ipsumParagraphs: this.state.paragraphCount });
+    this.setState({
+      ipsumParagraphs: [...Array(this.state.paragraphCount)].map(item =>
+        loremIpsumParagraph(75)
+      ),
+    });
   }
 
   render() {
-    console.log('state: ', this.state);
     return (
       <div className="App">
         <Header />

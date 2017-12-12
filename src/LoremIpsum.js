@@ -1,15 +1,14 @@
 import React from 'react';
-import loremIpsumParagraph from './ipsum_script';
 import './LoremIpsum.css';
 
 const LoremIpsum = ({ paragraphs }) => (
   <div className='LoremIpsum'>
-    {[...Array(paragraphs)].map((item, i) => (
+    {paragraphs.map((paragraph, i) => (
       <p
         className='LoremIpsum__paragraph'
         key={i}
       >
-        {loremIpsumParagraph(75)}
+        {paragraph}
       </p>
     ))}
   </div>
