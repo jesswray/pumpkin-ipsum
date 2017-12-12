@@ -5,22 +5,25 @@ import GenerateButton from './GenerateButton';
 import Header from './Header';
 import LoremIpsum from './LoremIpsum';
 import loremIpsumParagraph from './ipsum_script';
+import Footer from './Footer';
 
 class App extends Component {
   state = {
     paragraphCount: null,
-    ipsumParagraphs: [],
+    ipsumParagraphs: [loremIpsumParagraph(40)],
+    preview: true,
   }
 
   onParagraphSelect = (number) => {
     this.setState({ paragraphCount: number });
   }
 
-  onGenerate = (event) => {
+  onGenerate = () => {
     this.setState({
       ipsumParagraphs: [...Array(this.state.paragraphCount)].map(item =>
         loremIpsumParagraph(75)
       ),
+      preview: false,
     });
   }
 
@@ -34,7 +37,8 @@ class App extends Component {
             onButtonClick={this.onParagraphSelect}
           />
           <GenerateButton onClick={this.onGenerate} />
-          <LoremIpsum paragraphs={this.state.ipsumParagraphs}/>
+          <LoremIpsum paragraphs={this.state.ipsumParagraphs} isPreview={this.state.preview}/>
+          <Footer />
         </div>
       </div>
     );

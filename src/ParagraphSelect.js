@@ -13,7 +13,7 @@ class ParagraphSelect extends Component {
       <div className='ParagraphSelect'>
         <ButtonToolbar>
           <span className='ParagraphSelect__label'>Paragraphs: </span>
-          {[1,2,3,4].map((number) => {
+          {[1,2,3,4,5].map((number) => {
             return (
               <Button
                 key={number}

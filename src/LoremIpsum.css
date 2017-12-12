@@ -2,3 +2,11 @@
   margin: 20px 50px;
   min-width: 300px;
 }
+
+.LoremIpsum--preview {
+  opacity: .3;
+}
+
+.LoremIpsum--preview p::after {
+  content: " ... ";
+}
