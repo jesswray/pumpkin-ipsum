@@ -1,6 +1,5 @@
 {
   "name": "pumpkin-ipsum",
-  "homepage": "http://jesswray.com/pumpkin-ipsum",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "npm run build&&gh-pages -d build",
+    "deploy": "npm run build&&surge /Users/jessicawray/code/pumpkin-ipsum/build pumpkinipsum.com",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
