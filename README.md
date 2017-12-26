@@ -1,3 +1,11 @@
 Lorem ipsum, but cozier.
 
-Using a modified version of this Javascript lorem ipsum generator: http://bridell.com/files/loremipsum.js
+To run locally:
+```
+git clone https://github.com/wrayjs/pumpkin-ipsum.git
+cd pumpkin-ipsum
+yarn install
+yarn start
+```
+
+The text generator uses a rough version of http://bridell.com/files/loremipsum.js.
